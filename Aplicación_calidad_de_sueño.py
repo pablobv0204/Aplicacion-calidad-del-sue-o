@@ -1357,14 +1357,14 @@ def pestana_introduccion() -> None:
 
     seccion("Cómo funciona", "Cuatro pasos sencillos. En cada uno puedes volver atrás.")
     pasos = [
-        ("📋", "Tus datos", "Cuéntanos sobre tu rutina: horas de sueño, estrés, cafeína, pantallas y trabajo."),
-        ("📊", "Tu resultado", "Conoce tu nivel de riesgo más probable, tu probabilidad de sentirte descansado y tu rendimiento mental."),
-        ("👥", "Tu posición", "Mira cómo te comparas con otras personas."),
-        ("💡", "Cómo mejorar", "Prueba cambios en tus hábitos y mira cuánto podrían ayudarte."),
+        ("Tus datos", "Cuéntanos sobre tu rutina: horas de sueño, estrés, cafeína, pantallas y trabajo."),
+        ("Tu resultado", "Conoce tu nivel de riesgo más probable, tu probabilidad de sentirte descansado y tu rendimiento mental."),
+        ("Tu posición", "Mira cómo te comparas con otras personas."),
+        ("Cómo mejorar", "Prueba cambios en tus hábitos y mira cuánto podrían ayudarte."),
     ]
     mostrar_html('<div class="guia">' + "".join(
-        f'<div class="item"><div class="num">{i}</div><div class="t">{emoji} {titulo}</div><div class="d">{texto}</div></div>'
-        for i, (emoji, titulo, texto) in enumerate(pasos, 1)) + "</div>")
+        f'<div class="item"><div class="num">{i}</div><div class="t">{titulo}</div><div class="d">{texto}</div></div>'
+        for i, (titulo, texto) in enumerate(pasos, 1)) + "</div>")
 
     mostrar_html('<div class="chips">' + "".join(f'<span class="chip">{c}</span>' for c in [
         "Solo toma unos minutos", "No pide tu nombre ni datos de contacto",
